@@ -64,6 +64,7 @@ function cleanForm(){
     neighbourhood.value = '';
     city.value = '';
     state.value = '';
+    errorSpan.innerHTML = '';
 }
 
 
