@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Procurar pelo CEP</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header_title">
+            <h1>Busca por CEP</h1>
+        </div>
+        <div class="content">
+            <form>
+                <label>CEP</label>
+                <input type="text" required maxlength="9" id="CEP" placeholder="insira o CEP aqui" onkeypress="return sanitizerInput(event)">
+
+                <label>Rua</label>
+                <input type="text" readonly id="street">
+
+                <label>Bairro</label>
+                <input type="text" readonly id="neighbourhood">
+
+                <label>Cidade</label>
+                <input type="text" readonly id="city">
+
+                <label>Estado</label>
+                <input type="text" readonly id="state">
+            </form>
+
+            <button id="searchBtn">Buscar</button>
+            <button id="cleanBtn">Limpar</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    
+</body>
+</html>
