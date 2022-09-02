@@ -15,19 +15,21 @@
         <div class="content">
             <form>
                 <label>CEP</label>
-                <input type="text" required maxlength="9" id="CEP" placeholder="insira o CEP aqui" onkeypress="return sanitizerInput(event)">
+                <input type="text" required maxlength="9" id="CEP" class="CEP" placeholder="insira o CEP aqui" onkeypress="return sanitizerInput(event)">
+                <span id="errorSpan" class="error"></span>
+                <br>
 
                 <label>Rua</label>
-                <input type="text" readonly id="street">
+                <input type="text" readonly id="street" class="input">
 
                 <label>Bairro</label>
-                <input type="text" readonly id="neighbourhood">
+                <input type="text" readonly id="neighbourhood" class="input">
 
                 <label>Cidade</label>
-                <input type="text" readonly id="city">
+                <input type="text" readonly id="city" class="input">
 
                 <label>Estado</label>
-                <input type="text" readonly id="state">
+                <input type="text" readonly id="state" class="input">
             </form>
 
             <button id="searchBtn">Buscar</button>

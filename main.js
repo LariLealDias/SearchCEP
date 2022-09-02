@@ -12,6 +12,7 @@ const street = document.getElementById('street');
 const neighbourhood = document.getElementById('neighbourhood');
 const city = document.getElementById('city');
 const state = document.getElementById('state');
+const errorSpan = document.getElementById('errorSpan');
 
 
 //Insert only number in element input id="CEP"
@@ -37,6 +38,9 @@ function searchCEP(){
             fetch(urlApi)
             .then(res => res.json())
             .then(data => insertDataInInput(data))
+            .catch(error => {
+                errorSpan.innerHTML = 'cep não encontrado';
+            })
         }catch(e){
             console.error('ops,algo está errado...');
         }
